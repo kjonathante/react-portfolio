@@ -3,7 +3,8 @@ import React, { Component } from "react";
 import Home from "../Home/Home";
 import Portfolio from "../Portfolio/Portfolio";
 import Contact from "../Contact/Contact";
-import Navigation from "../Navigation/Navigation"
+import Header from "../Header/Header";
+import Navigation from "../Navigation/Navigation";
 import styles from "./App.module.css";
 
 import {
@@ -20,10 +21,9 @@ class App extends Component {
       <Router>
         <div className="App">
           <div className="container">
-            <header className={styles.header}>
+            <Header>
               <Navigation />
-            </header>
-            <hr />
+            </Header>
             {/* Routes will go here */}
             <Switch>
               <Route exact={true} path="/" component={Home} />
