@@ -3,6 +3,8 @@ import React, { Component } from "react";
 import Home from "../Home/Home";
 import Portfolio from "../Portfolio/Portfolio";
 import Contact from "../Contact/Contact";
+import Navigation from "../Navigation/Navigation"
+import styles from "./App.module.css";
 
 import {
   BrowserRouter as Router,
@@ -18,17 +20,9 @@ class App extends Component {
       <Router>
         <div className="App">
           <div className="container">
-            <ul>
-              <li>
-                <Link to="/">Home</Link>
-              </li>
-              <li>
-                <Link to="/portfolio">Portfolio</Link>
-              </li>
-              <li>
-                <Link to="/contact">Contact</Link>
-              </li>
-            </ul>
+            <header className={styles.header}>
+              <Navigation />
+            </header>
             <hr />
             {/* Routes will go here */}
             <Switch>
